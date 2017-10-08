@@ -12,5 +12,14 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
+})->name('home');
+Route::get('/login', function () {
+    return view('login');
+});
+Route::get('/profile', function () {
+    return view('profile');
+});
+Route::get('/recruitment', function () {
+    return view('recruitment');
 });
