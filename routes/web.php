@@ -22,4 +22,10 @@ Route::get('/profile', function () {
 });
 Route::get('/recruitment', function () {
     return view('recruitment');
-});
+})->name('recruitment');
+Route::get('/pb', function () {
+    return view('pb');
+})->name('pb');
+Route::get('/pg', function () {
+    return view('pg');
+})->name('pg');

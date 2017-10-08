@@ -426,7 +426,7 @@
               <li class="level1"><a href="404error.html"><span>404 Error Page</span></a> </li>
             </ul> -->
           </li>
-          <li class="level0 nav-7 level-top parent"> <a href="grid.html" class="level-top"> <span>PB</span> </a>
+          <li class="level0 nav-7 level-top parent"> <a href="{{route('pb')}}" class="level-top"> <span>PB</span> </a>
             <!-- <div style="display: none; left: 0px;" class="level0-wrapper dropdown-6col">
               <div class="level0-wrapper2">
                 <div class="nav-block nav-block-center">
@@ -481,7 +481,7 @@
               </div>
             </div> -->
           </li>
-          <li class="level0 nav-6 level-top parent"> <a href="grid.html" class="level-top"> <span>PG</span> </a>
+          <li class="level0 nav-6 level-top parent"> <a href="{{route('pg')}}" class="level-top"> <span>PG</span> </a>
             <!-- <div style="display: none; left: 0px;" class="level0-wrapper dropdown-6col">
               <div class="level0-wrapper2">
                 <div class="nav-block nav-block-center grid13-8 itemgrid itemgrid-4col">
@@ -531,7 +531,7 @@
               </div>
             </div> -->
           </li>
-          <li class="level0 nav-7 level-top parent"> <a class="level-top" href="grid.html"> <span>Đăng bài</span> </a>
+          <li class="level0 nav-7 level-top parent"> <a class="level-top" href="{{route('recruitment')}}"> <span>Đăng bài</span> </a>
             
           </li>
           <li class="level0 nav-8 level-top"> <a href="grid.html" class="level-top"> <span>Công ty</span> </a> </li>
