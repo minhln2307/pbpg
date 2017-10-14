@@ -85,7 +85,7 @@
                   </ul>
                 </div>
                 <!-- End Header Company -->
-                <div class="login"><a href="login.html"><span>Log In</span></a></div>
+                <div class="login"><a href="{{route('login')}}"><span>Log In</span></a></div>
               </div>
             </div>
             <!-- End Header Top Links --> 
