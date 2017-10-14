@@ -117,7 +117,7 @@
                             </div>
                           </div>
                           <div class="actions"><span class="add-to-links"> <!-- <a href="wishlist.html" class="link-wishlist" title="Add to Wishlist"><span>Add to Wishlist</span></a> -->
-                            <button  title="show info" class="button btn-cart"><span><a href="product_detail.html">Xem thông tin</a></span></button>
+                            <button  title="show info" class="button btn-cart"><span><a href="{{route('profile')}}">Xem thông tin</a></span></button>
                             <!-- <a href="compare.html" class="link-compare" title="Add to Compare"><span>Add to Compare</span></a> --></span> </div>
                         </div>
                       </div>

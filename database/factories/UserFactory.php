@@ -45,7 +45,7 @@ $factory->define(App\Job::class, function (Faker $faker) {
         'description' => $faker->text(),
         'address' => $faker->address,
         'salary' => $faker->text(),
-        'time'  => $faker->dateTimeAD($max ='now',$timezone=date_default_timezone_get()),
+        'time'  => $faker->dateTimeAD($max ='now'),
         'company_id' => $faker->biasedNumberBetween($min = 1,$max = 10),
     ];
 });
@@ -61,16 +61,16 @@ $factory->define(App\Hire::class, function (Faker $faker) {
 $factory->define(App\PbPg::class, function (Faker $faker) {
 
     return [
-        'full_name' => $faker->biasedNumberBetween($min = 1, $max = 10),
-        'birthday' => $faker->biasedNumberBetween($min = 1, $max = 10),
+        'full_name' => $faker->firstNameMale(),
+        'birthday' => $faker->date($format = 'Y-m-d', $max = 'now'),
         'address' => $faker->address,
         'email' => $faker->unique()->safeEmail,
-        'mobile' => $faker->phoneNumber,
+        'mobile' => 123456,
         'description' => $faker->text(),
-        'profile_picture' => $faker->imageUrl($width, $height, 'cats', true, 'Faker'),
+        'profile_picture' => $faker->imageUrl($width = 640, $height = 480),
         'images' => $faker->imageUrl($width, $height, 'cats', true, 'Faker'),
-        'height' => $faker->randomFloat($nbMaxDecimal = 3),
-        'weight' => $faker->randomFloat($nbMaxDecimal=3),
+        'height' => 180,
+        'weight' => 60,
         'user_id' => $faker->biasedNumberBetween($min = 1 , $max = 10),
     ];
 });

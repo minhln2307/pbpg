@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateJogsTable extends Migration
+class CreateJobsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -15,10 +15,10 @@ class CreateJogsTable extends Migration
     {
         Schema::create('jobs', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('title',100);
-            $table->text('description');
+            $table->text('title', 100);
+            $table->text('description', 100);
             $table->string('address',100)->nullable();
-            $table->string('salary',20);
+            $table->text('salary');
             $table->timestamp('time');
             $table->integer('company_id');
             $table->timestamps();

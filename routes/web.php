@@ -14,9 +14,9 @@
 Route::get('/', function () {
     return view('index');
 })->name('home');
-Route::get('/login', function () {
-    return view('login');
-})->name('login');
+// Route::get('/login', function () {
+//     return view('login');
+// })->name('login');
 Route::get('/profile', function () {
     return view('profile');
 });
@@ -29,3 +29,25 @@ Route::get('/pb', function () {
 Route::get('/pg', function () {
     return view('pg');
 })->name('pg');
+Route::get('/profile', function () {
+    return view('profile');
+})->name('profile');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
