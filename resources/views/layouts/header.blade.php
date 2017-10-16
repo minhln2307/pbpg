@@ -69,7 +69,7 @@
             <!-- Header Top Links -->
             <div class="toplinks">
               <div class="links">
-                <div class="myaccount"><a title="My Account" href="login.html"><span>My Account</span></a></div>
+                <div class="myaccount"><a title="My Account" href=""><span>My Account</span></a></div>
                 <!-- <div class="wishlist"><a title="My Wishlist" href="wishlist.html"><span>Wishlist</span></a></div>
                 <div class="check"><a href="checkout.html" title="Checkout"><span>Checkout</span></a></div>
                 <div class="demo"><a href="#" title="Demo"><span>Demo</span></a></div> -->
@@ -85,7 +85,60 @@
                   </ul>
                 </div>
                 <!-- End Header Company -->
+<<<<<<< HEAD
                 <div class="login"><a href=""><span>Log In</span></a></div>
+=======
+                  
+
+
+                <div class="dropdown block-company-wrapper hidden-xs">
+                  @guest
+                    <a href="{{ route('login') }}">Login</a>
+                  @else
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                              {{ Auth::user()->name }} <span class="caret"></span>
+                          </a>
+                    <ul class="dropdown-menu" role="menu">
+                      <li role="presentation">
+                        <a href="{{ route('logout') }}">
+                            Logout
+                        </a>
+
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                          {{ csrf_field() }}
+                        </form>
+                      </li>
+                    </ul>
+                  @endguest
+                </div>
+                  
+                
+                {{-- <ul class="nav navbar-nav ">
+                @guest
+                    <li><a href="{{ route('login') }}">Login</a></li>
+                @else
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                            {{ Auth::user()->name }} <span class="caret"></span>
+                        </a>
+
+                        <ul class="dropdown-menu" role="menu">
+                            <li>
+                                <a href="{{ route('logout') }}">
+                                    Logout
+                                </a>
+
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    {{ csrf_field() }}
+                                </form>
+                            </li>
+
+                        </ul>
+                    </li>
+                @endguest
+                </ul> --}}
+                                   
+>>>>>>> 0302aa451506cbd938fbfbc1f0f38fb9f583f2b9
               </div>
             </div>
             <!-- End Header Top Links --> 

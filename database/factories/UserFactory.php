@@ -34,7 +34,7 @@ $factory->define(App\Company::class, function (Faker $faker) {
         'about' => $faker->text(),
         'rate'  => $faker->biasedNumberBetween($min = 1, $max =5),
         'user_id' => $faker->biasedNumberBetween($min = 1,$max = 10),
-        'mobile' => $faker->phoneNumber,
+        'mobile' => $faker->tollFreePhoneNumber(),
     ];
 });
 
@@ -44,7 +44,7 @@ $factory->define(App\Job::class, function (Faker $faker) {
         'title' => $faker->text(),
         'description' => $faker->text(),
         'address' => $faker->address,
-        'salary' => $faker->text(),
+        'salary' => $faker->numberBetween($min = 500000, $max = 5000000),
         'time'  => $faker->dateTimeAD($max ='now'),
         'company_id' => $faker->biasedNumberBetween($min = 1,$max = 10),
     ];
@@ -65,13 +65,14 @@ $factory->define(App\PbPg::class, function (Faker $faker) {
         'birthday' => $faker->date($format = 'Y-m-d', $max = 'now'),
         'address' => $faker->address,
         'email' => $faker->unique()->safeEmail,
-        'mobile' => 123456,
+        'mobile' => $faker->tollFreePhoneNumber(),
         'description' => $faker->text(),
         'profile_picture' => $faker->imageUrl($width = 640, $height = 480),
         'images' => $faker->imageUrl($width, $height, 'cats', true, 'Faker'),
-        'height' => 180,
-        'weight' => 60,
+        'height' => $faker->randomFloat($nbMaxDecimals = NULL, $min = 160, $max = 200),
+        'weight' => $faker->randomFloat($nbMaxDecimals = NULL, $min = 50, $max = 70),
         'user_id' => $faker->biasedNumberBetween($min = 1 , $max = 10),
+        'gender'=>$faker->biasedNumberBetween($min=0,$max=1),
     ];
 });
 
