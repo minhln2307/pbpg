@@ -8,6 +8,8 @@ use App\Http\Requests;
 use Validator;
 use Auth;
 use Illuminate\Support\MessageBag;
+use DB;
+use App\User;
 
 class LoginController extends Controller
 {
@@ -31,9 +33,13 @@ class LoginController extends Controller
     	if ($validator->fails()) {
     		return redirect()->back()->withErrors($validator)->withInput();
     	} else {
+    		
     		$email = $request->input('email');
     		$password = $request->input('password');
-    		if( Auth::attempt(['email' => $email, 'password' =>$password])) {
+
+    		$user = User::getUserBy($email);
+    		
+       		if( Auth::attempt(['email' => $email, 'password' =>$password, 'permission' => 0]) ) {
     			return redirect()->intended('accept');
     		} else {
     			$errors = new MessageBag(['errorlogin' => 'Email hoặc mật khẩu không đúng']);

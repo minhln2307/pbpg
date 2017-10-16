@@ -35,14 +35,21 @@ Route::get('/profile', function () {
     return view('profile');
 })->name('profile');
 
-<<<<<<< HEAD
+
 
 Route::group(['' => 'admin'], function(){
+
+	/* route login admin*/
 	Route::get('admin', 'LoginController@getLogin');
+
+	/* route login admin*/
 	Route::post('admin','LoginController@postLogin')->name('admin.login');
+
+
+	/* route index admin*/
 	Route::get('accept', 'HomeController@getIndex')->name('admin.accept');
 });
-=======
+
 /* route login*/
 
 Route::get('/login','client\LoginController@getlogin')->name('login');
@@ -64,4 +71,4 @@ Route::get('logout','client\LoginController@getlogout')->name('logout');
 
 /*end route logout*/
 
->>>>>>> 0302aa451506cbd938fbfbc1f0f38fb9f583f2b9
+
