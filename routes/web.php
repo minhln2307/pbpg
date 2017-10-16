@@ -29,3 +29,10 @@ Route::get('/pg', function () {
 Route::get('/profile', function () {
     return view('profile');
 })->name('profile');
+
+
+Route::group(['' => 'admin'], function(){
+	Route::get('admin', 'LoginController@getLogin');
+	Route::post('admin','LoginController@postLogin')->name('admin.login');
+	Route::get('accept', 'HomeController@getIndex')->name('admin.accept');
+});

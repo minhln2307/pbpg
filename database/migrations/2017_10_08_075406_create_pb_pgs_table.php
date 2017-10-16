@@ -23,8 +23,8 @@ class CreatePbPgsTable extends Migration
             $table->text('description');
             $table->string('profile_picture');
             $table->text('images')->nullable();
-            $table->numeric('height');
-            $table->numeric('weight');
+            $table->integer('height');
+            $table->integer('weight');
 
 
             $table->integer('user_id');
