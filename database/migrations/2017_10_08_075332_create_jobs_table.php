@@ -21,8 +21,8 @@ class CreateJobsTable extends Migration
             $table->text('title', 100);
             $table->text('description', 100);
             $table->string('address',100)->nullable();
-            $table->integer('salary');
-            $table->datetime('time');
+            $table->text('salary');
+            $table->timestamp('time');
             $table->integer('company_id');
             $table->timestamps();
         });
