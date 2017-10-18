@@ -35,6 +35,9 @@ Route::get('/profile', function () {
     return view('profile');
 })->name('profile');
 
+Route::get('/dashbord',function(){
+	return view('dashbord');
+})->name('admin');
 /* route login*/
 
 Route::get('/login','client\LoginController@getlogin')->name('login');
@@ -56,3 +59,4 @@ Route::get('logout','client\LoginController@getlogout')->name('logout');
 
 /*end route logout*/
 
+Route::resource('users','UserController');
