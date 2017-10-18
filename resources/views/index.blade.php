@@ -1,3 +1,4 @@
+{{-- {{dd($pgs)}} --}}
 @extends('layouts.header')
 
 @section('content')
@@ -86,12 +87,16 @@
               <div id="best-seller-slider" class="product-flexslider hidden-buttons">
                 <div class="slider-items slider-width-col4"> 
                   
-                  <!-- Item -->
+                  @foreach ($pbs as $pb)
+
+
+                    <!-- Item -->
+                  
                   <div class="item">
                     <div class="col-item">
                       <div class="item-inner">
                         <div class="item-img">
-                          <div class="item-img-info"> <a href="product_detail.html"  title="Sample Product" class="product-image"> <img src="products-images/product22.jpg" alt="Sample Product"></a>
+                          <div class="item-img-info"> <a href="product_detail.html"  title="Sample Product" class="product-image"> <img src="{{$pb->profile_picture}}" alt="Sample Product"></a>
                             <div class="item-box-hover">
                               <div class="box-inner">
                                 <div class="product-detail-bnt"><a href="quick_view.html" class="button detail-bnt"> <span> Quick View</span></a></div>
@@ -101,7 +106,7 @@
                         </div>
                         <div class="item-info">
                           <div class="info-inner">
-                            <div class="item-title"> <a href="product_detail.html" title="Sample Product"> Họ và tên </a> </div>
+                            <div class="item-title"> <a href="product_detail.html" title="Sample Product"> {{$pb->full_name}} </a> </div>
                             <div class="item-content">
                               <div class="rating">
                                 <div class="ratings">
@@ -124,119 +129,11 @@
                     </div>
                   </div>
                   <!-- End Item --> 
+                  @endforeach
+                  
                   
                   <!-- Item -->
-                  <div class="item">
-                    <div class="col-item">
-                      <div class="item-inner">
-                        <div class="item-img">
-                          
-                          <div class="item-img-info"> <a href="product_detail.html"  title="Sample Product" class="product-image"> <img src="products-images/product23.jpg" alt="Sample Product"> </a>
-                            <div class="item-box-hover">
-                              <div class="box-inner">
-                                <div class="product-detail-bnt"><a href="quick_view.html" class="button detail-bnt"> <span> Quick View</span></a></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="item-info">
-                          <div class="info-inner">
-                            <div class="item-title"> <a href="product_detail.html" title="Sample Product"> Họ và tên </a>  </div>
-                            <div class="item-content">
-                              <div class="rating">
-                                <div class="ratings">
-                                  <div class="rating-box">
-                                    <div class="rating" style="width:80%"></div>
-                                  </div>
-                                  <p class="rating-links"> <a href="#">1 Review(s)</a> <span class="separator">|</span> <a href="#">Add Review</a> </p>
-                                </div>
-                              </div>
-                                <!-- <div class="item-price">
-                                  <div class="price-box"> <span class="regular-price" id="product-price-1"> <span class="price">$125.00</span> </span> </div>
-                                </div> -->
-                            </div>
-                          </div>
-                          <div class="actions"><span class="add-to-links"> <!-- <a href="wishlist.html" class="link-wishlist" title="Add to Wishlist"><span>Add to Wishlist</span></a> -->
-                            <button  title="Add to Cart" class="button btn-cart"><span>Xem thông tin</span></button>
-                            <!-- <a href="compare.html" class="link-compare" title="Add to Compare"><span>Add to Compare</span></a> --></span> </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="item">
-                    <div class="col-item">
-                      <div class="item-inner">
-                        <div class="item-img">
-                          
-                          <div class="item-img-info"> <a href="product_detail.html"  title="Sample Product" class="product-image"> <img src="products-images/product24.jpg" alt="Sample Product"> </a>
-                            <div class="item-box-hover">
-                              <div class="box-inner">
-                                <div class="product-detail-bnt"><a href="quick_view.html" class="button detail-bnt"> <span> Quick View</span></a></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="item-info">
-                          <div class="info-inner">
-                            <div class="item-title"> <a href="product_detail.html" title="Sample Product"> Họ và tên </a>  </div>
-                            <div class="item-content">
-                              <div class="rating">
-                                <div class="ratings">
-                                  <div class="rating-box">
-                                    <div class="rating" style="width:80%"></div>
-                                  </div>
-                                  <p class="rating-links"> <a href="#">1 Review(s)</a> <span class="separator">|</span> <a href="#">Add Review</a> </p>
-                                </div>
-                              </div>
-                                <!-- <div class="item-price">
-                                  <div class="price-box"> <span class="regular-price" id="product-price-1"> <span class="price">$125.00</span> </span> </div>
-                                </div> -->
-                            </div>
-                          </div>
-                          <div class="actions"><span class="add-to-links"> <!-- <a href="wishlist.html" class="link-wishlist" title="Add to Wishlist"><span>Add to Wishlist</span></a> -->
-                            <button  title="Add to Cart" class="button btn-cart"><span>Xem thông tin</span></button>
-                            <!-- <a href="compare.html" class="link-compare" title="Add to Compare"><span>Add to Compare</span></a> --></span> </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="item">
-                    <div class="col-item">
-                      <div class="item-inner">
-                        <div class="item-img">
-                          
-                          <div class="item-img-info"> <a href="product_detail.html"  title="Sample Product" class="product-image"> <img src="products-images/product25.jpg" alt="Sample Product"> </a>
-                            <div class="item-box-hover">
-                              <div class="box-inner">
-                                <div class="product-detail-bnt"><a href="quick_view.html" class="button detail-bnt"> <span> Quick View</span></a></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="item-info">
-                          <div class="info-inner">
-                            <div class="item-title"> <a href="product_detail.html" title="Sample Product"> Họ và tên </a>  </div>
-                            <div class="item-content">
-                              <div class="rating">
-                                <div class="ratings">
-                                  <div class="rating-box">
-                                    <div class="rating" style="width:80%"></div>
-                                  </div>
-                                  <p class="rating-links"> <a href="#">1 Review(s)</a> <span class="separator">|</span> <a href="#">Add Review</a> </p>
-                                </div>
-                              </div>
-                                <!-- <div class="item-price">
-                                  <div class="price-box"> <span class="regular-price" id="product-price-1"> <span class="price">$125.00</span> </span> </div>
-                                </div> -->
-                            </div>
-                          </div>
-                          <div class="actions"><span class="add-to-links"> <!-- <a href="wishlist.html" class="link-wishlist" title="Add to Wishlist"><span>Add to Wishlist</span></a> -->
-                            <button  title="Info" class="button btn-cart"><span>Xem thông tin</span></button>
-                            <!-- <a href="compare.html" class="link-compare" title="Add to Compare"><span>Add to Compare</span></a> --></span> </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                  
                   <!-- End Item --> 
                   
                 </div>
@@ -250,153 +147,96 @@
               </div>
               <div id="featured-slider" class="product-flexslider hidden-buttons">
                 <div class="slider-items slider-width-col4"> 
+                  @foreach ($pgs as $pg)
+                    <!-- Item -->
+                  <div class="item">
+                    <div class="col-item">
+                      <div class="item-inner">
+                        <div class="item-img">
+                          <div class="item-img-info"> <a href="product_detail.html"  title="Sample Product" class="product-image"> <img src="{{$pg->profile_picture}}" alt="Sample Product"> </a>
+                            <div class="item-box-hover">
+                              <div class="box-inner">
+                                <div class="product-detail-bnt"><a href="quick_view.html" class="button detail-bnt"> <span> Quick View</span></a></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="item-info">
+                          <div class="info-inner">
+                            <div class="item-title"> <a href="product_detail.html" title="Sample Product"> {{$pg->full_name}} </a>  </div>
+                            <div class="item-content">
+                              <div class="rating">
+                                <div class="ratings">
+                                  <div class="rating-box">
+                                    <div class="rating" style="width:80%"></div>
+                                  </div>
+                                  <p class="rating-links"> <a href="#">1 Review(s)</a> <span class="separator">|</span> <a href="#">Add Review</a> </p>
+                                </div>
+                              </div>
+                                <!-- <div class="item-price">
+                                  <div class="price-box"> <span class="regular-price" id="product-price-1"> <span class="price">$125.00</span> </span> </div>
+                                </div> -->
+                            </div>
+                          </div>
+                          <div class="actions"><span class="add-to-links"> <!-- <a href="wishlist.html" class="link-wishlist" title="Add to Wishlist"><span>Add to Wishlist</span></a> -->
+                            <button  title="Add to Cart" class="button btn-cart"><span>Xem thông tin</span></button>
+                            <!-- <a href="compare.html" class="link-compare" title="Add to Compare"><span>Add to Compare</span></a> --></span> </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                   
-                  <!-- Item -->
-                  <div class="item">
-                    <div class="col-item">
-                      <div class="item-inner">
-                        <div class="item-img">
-                          <div class="item-img-info"> <a href="product_detail.html"  title="Sample Product" class="product-image"> <img src="products-images/product26.jpg" alt="Sample Product"> </a>
-                            <div class="item-box-hover">
-                              <div class="box-inner">
-                                <div class="product-detail-bnt"><a href="quick_view.html" class="button detail-bnt"> <span> Quick View</span></a></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="item-info">
-                          <div class="info-inner">
-                            <div class="item-title"> <a href="product_detail.html" title="Sample Product"> Họ và tên </a>  </div>
-                            <div class="item-content">
-                              <div class="rating">
-                                <div class="ratings">
-                                  <div class="rating-box">
-                                    <div class="rating" style="width:80%"></div>
-                                  </div>
-                                  <p class="rating-links"> <a href="#">1 Review(s)</a> <span class="separator">|</span> <a href="#">Add Review</a> </p>
-                                </div>
-                              </div>
-                                <!-- <div class="item-price">
-                                  <div class="price-box"> <span class="regular-price" id="product-price-1"> <span class="price">$125.00</span> </span> </div>
-                                </div> -->
-                            </div>
-                          </div>
-                          <div class="actions"><span class="add-to-links"> <!-- <a href="wishlist.html" class="link-wishlist" title="Add to Wishlist"><span>Add to Wishlist</span></a> -->
-                            <button  title="Add to Cart" class="button btn-cart"><span>Xem thông tin</span></button>
-                            <!-- <a href="compare.html" class="link-compare" title="Add to Compare"><span>Add to Compare</span></a> --></span> </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="item">
-                    <div class="col-item">
-                      <div class="item-inner">
-                        <div class="item-img">
-                          <div class="item-img-info"> <a href="product_detail.html"  title="Sample Product" class="product-image"> <img src="products-images/product27.jpg" alt="Sample Product"> </a>
-                            <div class="item-box-hover">
-                              <div class="box-inner">
-                                <div class="product-detail-bnt"><a href="quick_view.html" class="button detail-bnt"> <span> Quick View</span></a></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="item-info">
-                          <div class="info-inner">
-                            <div class="item-title"> <a href="product_detail.html" title="Sample Product"> Họ và tên </a>  </div>
-                            <div class="item-content">
-                              <div class="rating">
-                                <div class="ratings">
-                                  <div class="rating-box">
-                                    <div class="rating" style="width:80%"></div>
-                                  </div>
-                                  <p class="rating-links"> <a href="#">1 Review(s)</a> <span class="separator">|</span> <a href="#">Add Review</a> </p>
-                                </div>
-                              </div>
-                                <!-- <div class="item-price">
-                                  <div class="price-box"> <span class="regular-price" id="product-price-1"> <span class="price">$125.00</span> </span> </div>
-                                </div> -->
-                            </div>
-                          </div>
-                          <div class="actions"><span class="add-to-links"> <!-- <a href="wishlist.html" class="link-wishlist" title="Add to Wishlist"><span>Add to Wishlist</span></a> -->
-                            <button  title="Add to Cart" class="button btn-cart"><span>Xem thông tin</span></button>
-                            <!-- <a href="compare.html" class="link-compare" title="Add to Compare"><span>Add to Compare</span></a> --></span> </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="item">
-                    <div class="col-item">
-                      <div class="item-inner">
-                        <div class="item-img">
-                          <div class="item-img-info"> <a href="product_detail.html"  title="Sample Product" class="product-image"> <img src="products-images/product20.jpg" alt="Sample Product"> </a>
-                            <div class="item-box-hover">
-                              <div class="box-inner">
-                                <div class="product-detail-bnt"><a href="quick_view.html" class="button detail-bnt"> <span> Quick View</span></a></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="item-info">
-                          <div class="info-inner">
-                            <div class="item-title"> <a href="product_detail.html" title="Sample Product"> Họ và tên </a>  </div>
-                            <div class="item-content">
-                              <div class="rating">
-                                <div class="ratings">
-                                  <div class="rating-box">
-                                    <div class="rating" style="width:80%"></div>
-                                  </div>
-                                  <p class="rating-links"> <a href="#">1 Review(s)</a> <span class="separator">|</span> <a href="#">Add Review</a> </p>
-                                </div>
-                              </div>
-                                <!-- <div class="item-price">
-                                  <div class="price-box"> <span class="regular-price" id="product-price-1"> <span class="price">$125.00</span> </span> </div>
-                                </div> -->
-                            </div>
-                          </div>
-                          <div class="actions"><span class="add-to-links"> <!-- <a href="wishlist.html" class="link-wishlist" title="Add to Wishlist"><span>Add to Wishlist</span></a> -->
-                            <button  title="Add to Cart" class="button btn-cart"><span>Xem thông tin</span></button>
-                            <!-- <a href="compare.html" class="link-compare" title="Add to Compare"><span>Add to Compare</span></a> --></span> </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="item">
-                    <div class="col-item">
-                      <div class="item-inner">
-                        <div class="item-img">
-                          <div class="item-img-info"> <a href="product_detail.html"  title="Sample Product" class="product-image"> <img src="products-images/product28.jpg" alt="Sample Product"> </a>
-                            <div class="item-box-hover">
-                              <div class="box-inner">
-                                <div class="product-detail-bnt"><a href="quick_view.html" class="button detail-bnt"> <span> Quick View</span></a></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="item-info">
-                          <div class="info-inner">
-                            <div class="item-title"> <a href="product_detail.html" title="Sample Product"> Họ và tên </a> </div>
-                            <div class="item-content">
-                              <div class="rating">
-                                <div class="ratings">
-                                  <div class="rating-box">
-                                    <div class="rating" style="width:80%"></div>
-                                  </div>
-                                  <p class="rating-links"> <a href="#">1 Review(s)</a> <span class="separator">|</span> <a href="#">Add Review</a> </p>
-                                </div>
-                              </div>
-                                <!-- <div class="item-price">
-                                  <div class="price-box"> <span class="regular-price" id="product-price-1"> <span class="price">$125.00</span> </span> </div>
-                                </div> -->
-                            </div>
-                          </div>
-                          <div class="actions"><span class="add-to-links"> <!-- <a href="wishlist.html" class="link-wishlist" title="Add to Wishlist"><span>Add to Wishlist</span></a> -->
-                            <button  title="Add to Cart" class="button btn-cart"><span>Xem thông tin</span></button>
-                            <!-- <a href="compare.html" class="link-compare" title="Add to Compare"><span>Add to Compare</span></a> --></span> </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
                   <!-- End Item --> 
+                  @endforeach
+                  
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="featured-pro col-lg-12">
+            <div class="slider-items-products">
+              <div class="new_title center">
+                <h2>Tin tuyển dụng</h2>
+              </div>
+              <div id="featured-slider" class="product-flexslider hidden-buttons">
+                <div class="slider-items slider-width-col4"> 
+                  @foreach ($jobs as $job)
+                    <!-- Item -->
+                  <div class="item">
+                    <div class="col-item">
+                      <div class="item-inner">
+                        {{-- <div class="item-img">
+                          <div class="item-img-info"> <a href="product_detail.html"  title="Sample Product" class="product-image"> <img src="{{$job}}" alt="Sample Product"> </a>
+                            <div class="item-box-hover">
+                              <div class="box-inner">
+                                <div class="product-detail-bnt"><a href="quick_view.html" class="button detail-bnt"> <span> </span></a></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div> --}}
+                        <div class="item-info">
+                          <div class="info-inner">
+                            <div class="item-title"> <a href="product_detail.html" title=""> {{$job->title}} </a>  </div>
+                            <div class="item-content">
+                              <div class=""><i class="icon-calendar"></i><b>Thời gian:</b> {{$job->time}}</div>
+                                <p><b>Mô tả công việc:</b> {{$job->description}} </p>
+                                <div class="item-price">
+                                  <div class="price-box"> <span class="regular-price" id="product-price-1"> <span class="price">{{number_format($job->salary)}} VNĐ</span> </span> </div>
+                                </div>
+                            </div>
+                          </div>
+                          <div class="actions"><span class="add-to-links"> <!-- <a href="wishlist.html" class="link-wishlist" title="Add to Wishlist"><span>Add to Wishlist</span></a> -->
+                            <button  title="Add to Cart" class="button btn-cart"><span>Đọc thêm</span></button>
+                            <!-- <a href="compare.html" class="link-compare" title="Add to Compare"><span>Add to Compare</span></a> --></span> </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <!-- End Item --> 
+                  @endforeach
+                  
                   
                 </div>
               </div>
@@ -409,55 +249,29 @@
   <!-- End main container --> 
   
   <!-- Latest Blog -->
-  <section class="latest-blog wow bounceInDown animated">
+{{--   <section class="latest-blog wow bounceInDown animated">
     <div class="container">
       <div class="row">
         <div class="new_title center">
           <h2><span>Tin Tuyển dụng</span></h2>
         </div>
-        <div class="col-xs-12 col-sm-3">
+        @foreach ($jobs as $job)
+         <div class="col-xs-12 col-sm-3">
           <div class="blog_inner">
             <div class="blog-img blog-l"> <img src="images/blog-img1.jpg" alt="Blog image">
               <div class="mask"> <a class="info" href="blog_detail.html">Read More</a> </div>
             </div>
-            <h2><a href="blog_detail.html">Pellentesque habitant morbi</a> </h2>
+            <h2><a href="blog_detail.html">{{$job->title}}</a> </h2>
             <div class="post-date"><i class="icon-calendar"></i> Apr 10, 2014</div>
-            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce sit  ... </p>
+            <p>{{$job->description}} </p>
           </div>
         </div>
-        <div class="col-xs-12 col-sm-3">
-          <div class="blog_inner">
-            <div class="blog-img blog-l"> <img src="images/blog-img2.jpg" alt="Blog image">
-              <div class="mask"> <a class="info" href="blog_detail.html">Read More</a> </div>
-            </div>
-            <h2><a href="blog_detail.html">Pellentesque habitant morbi</a> </h2>
-            <div class="post-date"><i class="icon-calendar"></i> Apr 10, 2014</div>
-            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce sit  ... </p>
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-3">
-          <div class="blog_inner">
-            <div class="blog-img blog-l"> <img src="images/blog-img3.jpg" alt="Blog image">
-              <div class="mask"> <a class="info" href="blog_detail.html">Read More</a> </div>
-            </div>
-            <h2><a href="blog_detail.html">Pellentesque habitant morbi</a> </h2>
-            <div class="post-date"><i class="icon-calendar"></i> Apr 10, 2014</div>
-            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce sit  ... </p>
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-3">
-          <div class="blog_inner">
-            <div class="blog-img blog-l"> <img src="images/blog-img4.jpg" alt="Blog image">
-              <div class="mask"> <a class="info" href="blog_detail.html">Read More</a> </div>
-            </div>
-            <h2><a href="blog_detail.html">Pellentesque habitant morbi</a> </h2>
-            <div class="post-date"><i class="icon-calendar"></i> Apr 10, 2014</div>
-            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce sit  ... </p>
-          </div>
-        </div>
+        @endforeach
+        
+        
       </div>
     </div>
-  </section>
+  </section> --}}
   <!-- End Latest Blog -->
   <div class="our-features-box">
     <div class="container">

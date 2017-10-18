@@ -85,9 +85,9 @@
                   </ul>
                 </div>
                 <!-- End Header Company -->
-<<<<<<< HEAD
-                <div class="login"><a href=""><span>Log In</span></a></div>
-=======
+
+                <div class="login"><a href="#"><span>Log In</span></a></div>
+
                   
 
 
@@ -138,7 +138,7 @@
                 @endguest
                 </ul> --}}
                                    
->>>>>>> 0302aa451506cbd938fbfbc1f0f38fb9f583f2b9
+
               </div>
             </div>
             <!-- End Header Top Links --> 
