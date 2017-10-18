@@ -35,9 +35,26 @@ Route::get('/profile', function () {
     return view('profile');
 })->name('profile');
 
+
 Route::get('/dashbord',function(){
 	return view('dashbord');
 })->name('admin');
+
+
+
+Route::group(['' => 'admin'], function(){
+
+	/* route login admin*/
+	Route::get('admin', 'LoginController@getLogin');
+
+	/* route login admin*/
+	Route::post('admin','LoginController@postLogin')->name('admin.login');
+
+
+	/* route index admin*/
+	Route::get('accept', 'HomeController@getIndex')->name('admin.accept');
+});
+
 /* route login*/
 
 Route::get('/login','client\LoginController@getlogin')->name('login');
@@ -59,4 +76,6 @@ Route::get('logout','client\LoginController@getlogout')->name('logout');
 
 /*end route logout*/
 
+
 Route::resource('users','UserController');
+
