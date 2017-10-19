@@ -30,7 +30,7 @@
                             <li>
                               <label for="billing:street1">Miêu tả <span class="required">*</span></label>
                               <br />
-                              <textarea title="Miêu tả" name="" id="" value="" class="input-text required-entry" /></textarea>
+                              <textarea title="Miêu tả" name="" id="" value="" rows="10" class="input-text required-entry" /></textarea>
                             </li>
                             <li>
                               <label for="billing:street1">Địa chỉ <span class="required">*</span></label>
