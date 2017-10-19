@@ -35,19 +35,29 @@ Route::get('/profile', function () {
     return view('profile');
 })->name('profile');
 
+Route::get('user', 'UserController@index');
 
 
-Route::group(['' => 'admin'], function(){
-
-	/* route login admin*/
-	Route::get('admin', 'LoginController@getLogin');
+Route::group(['prefix' => 'admin'], function(){
 
 	/* route login admin*/
-	Route::post('admin','LoginController@postLogin')->name('admin.login');
+	Route::get('/', 'LoginController@getLogin')->name('login.admin');
+
+	/* route login admin*/
+	Route::post('/','LoginController@postLogin')->name('admin.login');
 
 
 	/* route index admin*/
-	Route::get('accept', 'HomeController@getIndex')->name('admin.accept');
+	Route::get('pbpg-admin', function(){
+		return view('admin.dashboard');
+	});
+
+	Route::get('quan-ly-nguoi-dung',function(){
+		return view('admin.userAdmin');
+	})->name('admin.user');
+	Route::get('user', 'UserController@index');
+
+	Route::get('logout','LoginController@getlogout')->name('admin.logout');
 });
 
 /* route login*/
