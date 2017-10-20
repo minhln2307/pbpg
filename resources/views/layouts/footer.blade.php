@@ -242,6 +242,14 @@
 <script type="text/javascript" src="js/owl.carousel.min.js"></script> 
 <script src="{{asset('ckeditor/ckeditor.js')}}"></script>
 <script type="text/javascript">
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+<script type="text/javascript">
     //<![CDATA[
 	jQuery(function() {
 		jQuery(".slideshow").cycle({
