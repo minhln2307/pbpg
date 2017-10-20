@@ -42,7 +42,7 @@
 <script src="assets/js/jquery-1.11.3.min.js"></script>
 <![endif]-->
 		<script type="text/javascript">
-			if('ontouchstart' in document.documentElement) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+			if('ontouchstart' in document.documentElement) document.write("<script src='{{asset('assets/js/jquery.mobile.custom.min.js')}}'>"+"<"+"/script>");
 		</script>
 		<script src="{{asset('assets/js/bootstrap.min.js')}}"></script>
 
@@ -58,7 +58,7 @@
 		<script src="{{asset('assets/js/jquery.flot.min.js')}}"></script>
 		<script src="{{asset('assets/js/jquery.flot.pie.min.js')}}"></script>
 		<script src="{{asset('assets/js/jquery.flot.resize.min.js')}}"></script>
-
+		<script src="{{asset('ckeditor/ckeditor.js')}}"></script>
 		<!-- ace scripts -->
 		<script src="{{asset('assets/js/ace-elements.min.js')}}"></script>
 		<script src="{{asset('assets/js/ace.min.js')}}"></script>

@@ -31,6 +31,7 @@
 
 <!-- Google Fonts -->
 <link href='https://fonts.googleapis.com/css?family=Bitter:400,700,400italic' rel='stylesheet' type='text/css'>
+
 </head>
 
 <body class="cms-index-index">
